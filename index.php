@@ -5,7 +5,7 @@
         <title>test</title>
     </head>
     <style media="screen">
-        .table-responsive {
+        .table-sticky {
             min-height: .01%;
             overflow-x: auto;
             width: 100%;
@@ -38,25 +38,25 @@
         }
 
         /* Fixed row code */
-        .table-responsive {
+        .table-sticky {
             max-width: 100%;
-            max-height: 500px;
+            max-height: 90vh;
             overflow: auto;
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
         }
-        .table-responsive table {
+        .table-sticky table {
             margin-bottom: 0;
         }
 
-        .table-responsive table tr.sticky-row th, .table-responsive table tr.sticky-row td
+        .table-sticky table tr.sticky-row th, .table-sticky table tr.sticky-row td
         {
             background-color: #fff;
             border-top: 0;
             position: relative;
             z-index: 5;
         }
-        .table-responsive table td.sticky-col, .table-responsive table th.sticky-col
+        .table-sticky table td.sticky-cell, .table-sticky table th.sticky-cell
         {
             background-color: #fff;
             border-right: 1px solid #ddd;
@@ -64,7 +64,7 @@
             z-index: 10;
         }
 
-        .table-responsive table tr.sticky-row td.sticky-col, .table-responsive table tr.sticky-row th.sticky-col
+        .table-sticky table tr.sticky-row td.sticky-cell, .table-sticky table tr.sticky-row th.sticky-cell
         {
             z-index: 15;
         }
@@ -76,39 +76,29 @@
 
      <script type="text/javascript">
         jQuery(function($){
-/*
-            $(window).on( "resize", function() {
-                $(".sticky-header").each(function(){
-                    $(this).css('padding-top', $(this).find("table tr.sticky-row").height());
-                    $(this).scrollTop(1).scroll();
-                });
-            });
-            $(window).resize();
-*/
-
-            $(".sticky-header").scroll(function(){
+            $(".sticky-headers").scroll(function(){
                 $(this).find("table tr.sticky-row th").css('top', $(this).scrollTop());
                 $(this).find("table tr.sticky-row td").css('top', $(this).scrollTop());
             });
-            $(".sticky-ltr-col").scroll(function(){
-                $(this).find("table th.sticky-col").css('left', $(this).scrollLeft());
-                $(this).find("table td.sticky-col").css('left', $(this).scrollLeft());
+            $(".sticky-ltr-cells").scroll(function(){
+                $(this).find("table th.sticky-cell").css('left', $(this).scrollLeft());
+                $(this).find("table td.sticky-cell").css('left', $(this).scrollLeft());
             });
-            $(".sticky-rtl-col").scroll(function(){
+            $(".sticky-rtl-cells").scroll(function(){
                 var maxScroll = $(this).find("table").width() - $(this).width();
-                $(this).find("table th.sticky-col").css('right', maxScroll - $(this).scrollLeft());
-                $(this).find("table td.sticky-col").css('right', maxScroll - $(this).scrollLeft());
+                $(this).find("table th.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
+                $(this).find("table td.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
             });
 
         });
      </script>
     <body dir="rtl">
         <h1>Random things</h1>
-        <div class="table-responsive sticky-header  sticky-rtl-col">
+        <div class="table-sticky sticky-headers sticky-rtl-cells">
             <table class="table table-striped">
                 <thead>
                     <tr class="sticky-row">
-                        <th class="filterable-cell sticky-col">Ford</th>
+                        <th class="filterable-cell sticky-cell">Ford</th>
                         <th class="filterable-cell">Escort</th>
                         <th class="filterable-cell">Blue</th>
                         <th class="filterable-cell">2000</th>
@@ -151,7 +141,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -191,7 +181,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -231,7 +221,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -271,7 +261,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -311,7 +301,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -351,7 +341,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -391,7 +381,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -431,7 +421,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -471,7 +461,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -511,7 +501,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -551,7 +541,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -591,7 +581,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -631,7 +621,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -671,7 +661,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -711,7 +701,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
@@ -751,7 +741,7 @@
 
                     </tr>
                     <tr>
-                        <td class="filterable-cell sticky-col">Ford</td>
+                        <td class="filterable-cell sticky-cell">Ford</td>
                         <td class="filterable-cell">Escort</td>
                         <td class="filterable-cell">Blue</td>
                         <td class="filterable-cell">2000</td>
