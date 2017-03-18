@@ -95,15 +95,16 @@
                 $(this).find("table td.sticky-col").css('left', $(this).scrollLeft());
             });
             $(".sticky-rtl-col").scroll(function(){
-                $(this).find("table th.sticky-col").css('right', $(this).scrollLeft());
-                $(this).find("table td.sticky-col").css('right', $(this).scrollLeft());
+                var maxScroll = $(this).find("table").width() - $(this).width();
+                $(this).find("table th.sticky-col").css('right', maxScroll - $(this).scrollLeft());
+                $(this).find("table td.sticky-col").css('right', maxScroll - $(this).scrollLeft());
             });
 
         });
      </script>
-    <body>
+    <body dir="rtl">
         <h1>Random things</h1>
-        <div class="table-responsive sticky-header  sticky-ltr-col">
+        <div class="table-responsive sticky-header  sticky-rtl-col">
             <table class="table table-striped">
                 <thead>
                     <tr class="sticky-row">
