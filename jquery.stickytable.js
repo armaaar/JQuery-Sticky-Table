@@ -8,7 +8,7 @@ jQuery(function($) {
         $(this).find("table td.sticky-cell").css('left', $(this).scrollLeft());
     });
     $(".sticky-rtl-cells").scroll(function() {
-        var maxScroll = $(this).find("table").width() - $(this).width();
+        var maxScroll = $(this).find("table").prop("clientWidth") - $(this).prop("clientWidth");
         $(this).find("table th.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
         $(this).find("table td.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
     });
