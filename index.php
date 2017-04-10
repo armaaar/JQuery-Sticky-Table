@@ -54,7 +54,7 @@
 
 <body dir="ltr">
     <h1>Random things</h1>
-    <div class="table-sticky sticky-headers sticky-ltr-cells">
+    <div class="sticky-table sticky-headers sticky-ltr-cells">
         <table class="table table-striped">
             <thead>
                 <tr class="sticky-row">
