@@ -1,6 +1,6 @@
 .sticky-table {
     max-width: 100%;
-    max-height: 90vh;
+    max-height: 80vh;
     overflow: auto;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
