@@ -19,11 +19,11 @@ To have a fixed row (header, footer, ..etc):
 ### Fixed columns
 To have a fixed column, all the column's cells should be sticky. To have a sticky cell:
 - If your table is `LTR`:
-..* Add `sticky-ltr-cells` class to the *wrapper*.
-..* Add `sticky-cell` class to the `<td>` or `<th>` element you want to get sticky.
+..- Add `sticky-ltr-cells` class to the *wrapper*.
+..- Add `sticky-cell` class to the `<td>` or `<th>` element you want to get sticky.
 - If your table is `RTL`:
-..* Add `sticky-rtl-cells` class to the *wrapper*.
-..* Add `sticky-cell` class to the `<td>` or `<th>` element you want to get sticky.
+..- Add `sticky-rtl-cells` class to the *wrapper*.
+..- Add `sticky-cell` class to the `<td>` or `<th>` element you want to get sticky.
 
 You can view examples for more clarification.
 
