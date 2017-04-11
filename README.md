@@ -1,5 +1,5 @@
 # Sticky Table Plugin for JQuery
-jquery.stickytable is a lightweight plugin to help developers to have fixed rows or columns in a `<table>` using CSS classes only.
+jquery.stickytable is a lightweight plugin to help developers have fixed rows or columns in a `<table>` using CSS classes only.
 It doesn't need any initialization and it's totally responsive.
 
 ## Requirements
@@ -9,7 +9,7 @@ That's it!
 
 ## How to use Sticky Table
 - Add `jquery.stickytable.js` and `jquery.stickytable.css` to your page -or their minified versions-.
-- Wrap your `<table>` tag with a `<div>` with class `sticky-table`. Will refer to this `<div>` as the *wrapper*.
+- Wrap your `<table>` tag with a `<div>` with class `sticky-table`. We will refer to this `<div>` as the *wrapper*.
 
 ### Fixed rows
 To have a fixed row (header, footer, ..etc):
