@@ -1,4 +1,4 @@
-jQuery(function($) {
+jQuery(document).on('stickyTable', function() {
     $(".sticky-headers").scroll(function() {
         $(this).find("table tr.sticky-row th").css('top', $(this).scrollTop());
         $(this).find("table tr.sticky-row td").css('top', $(this).scrollTop());
@@ -12,4 +12,7 @@ jQuery(function($) {
         $(this).find("table th.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
         $(this).find("table td.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
     });
+});
+$( document ).ready(function(){
+    $( document ).trigger( "stickyTable" );
 });
