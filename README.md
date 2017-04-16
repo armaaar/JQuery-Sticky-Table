@@ -25,6 +25,13 @@ To have a fixed column, all the column's cells should be sticky. To have a stick
   - Add `sticky-rtl-cells` class to the *wrapper*.
   - Add `sticky-cell` class to the `<td>` or `<th>` element you want to get sticky.
 
+### AJAX loaded content
+If there is a table loaded using AJAX after the document is initially loaded
+and it's needed to be sticky, trigger the `stickyTable` event on `$( document )` like:
+```
+$( document ).trigger( "stickyTable" );
+```
+
 You can view examples for more clarification.
 
 ## License
