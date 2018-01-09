@@ -12,6 +12,8 @@
     width: 100%;
     max-width: 100%;
     border-spacing: 0;
+    padding: 0 !important;
+    border-collapse: collapse;
 }
 
 .sticky-table table tr.sticky-row th, .sticky-table table tr.sticky-row td {
