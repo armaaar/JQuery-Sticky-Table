@@ -12,18 +12,21 @@ That's it!
 - Wrap your `<table>` tag with a `<div>` with class `sticky-table`. We will refer to this `<div>` as the *wrapper*.
 
 ### Fixed rows
-To have a fixed row (header, footer, ..etc):
-- Add `sticky-headers` class to the *wrapper*.
-- Add `sticky-row` class to the `<tr>` element you want to get sticky.
+To have a fixed header:
+- Add `sticky-header` class to the `<tr>` element you want to get sticky relatively to the top.
+To have a fixed footer:
+- Add `sticky-footer` class to the `<tr>` element you want to get sticky relatively to the bottom.
 
 ### Fixed columns
 To have a fixed column, all the column's cells should be sticky. To have a sticky cell:
 - If your table is `LTR`:
   - Add `sticky-ltr-cells` class to the *wrapper*.
-  - Add `sticky-cell` class to the `<td>` or `<th>` element you want to get sticky.
+  - Add `sticky-cell` class to the `<td>` or `<th>` element you want to get sticky relatively to the left.
+  - Add `sticky-cell-opposite` class to the `<td>` or `<th>` element you want to get sticky relatively to the right.
 - If your table is `RTL`:
   - Add `sticky-rtl-cells` class to the *wrapper*.
-  - Add `sticky-cell` class to the `<td>` or `<th>` element you want to get sticky.
+  - Add `sticky-cell` class to the `<td>` or `<th>` element you want to get sticky relatively to the right.
+  - Add `sticky-cell-opposite` class to the `<td>` or `<th>` element you want to get sticky relatively to the left.
 
 ### AJAX loaded content
 If there is a table loaded using AJAX after the document is initially loaded
@@ -33,6 +36,10 @@ $( document ).trigger( "stickyTable" );
 ```
 
 You can view examples for more clarification.
-
+## Known Issues
+We are aware of the following issues and we would be grateful if anyone can help us with them:
+- sticky rows and cells flickers(having delay before they appear in their correct position) in Firefox <= v57.0 and Microsoft Edge
+## Credits
+Big thanks to [othree](https://github.com/othree) for his [jQuery RTL Scroll Type Detector](https://github.com/othree/jquery.rtl-scroll-type) which helped us alot supporting RTL tables for different browsers
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
