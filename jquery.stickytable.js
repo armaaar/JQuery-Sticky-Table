@@ -31,6 +31,10 @@ jQuery(document).on('stickyTable', function() {
         $(this).find("table th.sticky-cell-opposite").css('left', $(this).scrollLeft());
         $(this).find("table td.sticky-cell-opposite").css('left', $(this).scrollLeft());
     }).scroll();
+    
+    $( window ).resize(function() {
+        $(".sticky-table").scroll();
+    });
 });
 $( document ).ready(function(){
     $( document ).trigger( "stickyTable" );
