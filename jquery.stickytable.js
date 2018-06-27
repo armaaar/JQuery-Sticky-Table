@@ -23,14 +23,45 @@ jQuery(document).on('stickyTable', function() {
         $(this).find("table th.sticky-cell-opposite").css('right', maxScroll - $(this).scrollLeft());
         $(this).find("table td.sticky-cell-opposite").css('right', maxScroll - $(this).scrollLeft());
     }).scroll();
+
     
-    $(".sticky-rtl-cells").scroll(function() {
-        var maxScroll = $(this).find("table").prop("clientWidth") - $(this).prop("clientWidth");
-        $(this).find("table th.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
-        $(this).find("table td.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
-        $(this).find("table th.sticky-cell-opposite").css('left', $(this).scrollLeft());
-        $(this).find("table td.sticky-cell-opposite").css('left', $(this).scrollLeft());
-    }).scroll();
+    if($(".sticky-rtl-cells").length) {
+        var definer = $('<div dir="rtl" style="font-size: 14px; width: 4px; height: 1px; position: absolute; top: -1000px; overflow: scroll">ABCD</div>').appendTo('body')[0],
+            scrollTypeRTL = 'reverse';
+
+        if (definer.scrollLeft > 0) {
+            scrollTypeRTL = 'default';
+        } else {
+            definer.scrollLeft = 1;
+            if (definer.scrollLeft === 0) {
+                scrollTypeRTL = 'negative';
+            }
+        }
+        $(definer).remove();
+
+        $(".sticky-rtl-cells").scroll(function() {
+            var maxScroll = $(this).find("table").prop("clientWidth") - $(this).prop("clientWidth");
+            switch(scrollTypeRTL) {
+                case "default": // webKit Browsers
+                    $(this).find("table th.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
+                    $(this).find("table td.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
+                    $(this).find("table th.sticky-cell-opposite").css('left', $(this).scrollLeft());
+                    $(this).find("table td.sticky-cell-opposite").css('left', $(this).scrollLeft());
+                    break;
+                case "negative": // Firefox, Opera
+                    $(this).find("table th.sticky-cell").css('right', $(this).scrollLeft() * -1);
+                    $(this).find("table td.sticky-cell").css('right', $(this).scrollLeft() * -1);
+                    $(this).find("table th.sticky-cell-opposite").css('left', maxScroll + $(this).scrollLeft());
+                    $(this).find("table td.sticky-cell-opposite").css('left', maxScroll + $(this).scrollLeft());
+                    break;
+                case "reverse": // IE, Edge
+                    $(this).find("table th.sticky-cell").css('right', $(this).scrollLeft());
+                    $(this).find("table td.sticky-cell").css('right', $(this).scrollLeft());
+                    $(this).find("table th.sticky-cell-opposite").css('left', maxScroll - $(this).scrollLeft());
+                    $(this).find("table td.sticky-cell-opposite").css('left', maxScroll - $(this).scrollLeft());
+            }
+        }).scroll();
+    }
     
     $( window ).resize(function() {
         $(".sticky-table").scroll();
@@ -39,3 +70,4 @@ jQuery(document).on('stickyTable', function() {
 $( document ).ready(function(){
     $( document ).trigger( "stickyTable" );
 });
+
