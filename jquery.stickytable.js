@@ -8,18 +8,28 @@ jQuery(document).on('stickyTable', function() {
           $(this).scrollTop(csp - wd);
       });
     }
-    $(".sticky-headers").scroll(function() {
-        $(this).find("table tr.sticky-row th").css('top', $(this).scrollTop());
-        $(this).find("table tr.sticky-row td").css('top', $(this).scrollTop());
+    $(".sticky-table").scroll(function() {
+        $(this).find("table tr.sticky-header th").css('top', $(this).scrollTop());
+        $(this).find("table tr.sticky-header td").css('top', $(this).scrollTop());
+        var maxScroll = $(this).find("table").prop("clientHeight") - $(this).prop("clientHeight");
+        $(this).find("table tr.sticky-footer th").css('bottom', maxScroll - $(this).scrollTop());
+        $(this).find("table tr.sticky-footer td").css('bottom', maxScroll - $(this).scrollTop());
     }).scroll();
+
     $(".sticky-ltr-cells").scroll(function() {
         $(this).find("table th.sticky-cell").css('left', $(this).scrollLeft());
         $(this).find("table td.sticky-cell").css('left', $(this).scrollLeft());
+        var maxScroll = $(this).find("table").prop("clientWidth") - $(this).prop("clientWidth");
+        $(this).find("table th.sticky-cell-opposite").css('right', maxScroll - $(this).scrollLeft());
+        $(this).find("table td.sticky-cell-opposite").css('right', maxScroll - $(this).scrollLeft());
     }).scroll();
+    
     $(".sticky-rtl-cells").scroll(function() {
         var maxScroll = $(this).find("table").prop("clientWidth") - $(this).prop("clientWidth");
         $(this).find("table th.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
         $(this).find("table td.sticky-cell").css('right', maxScroll - $(this).scrollLeft());
+        $(this).find("table th.sticky-cell-opposite").css('left', $(this).scrollLeft());
+        $(this).find("table td.sticky-cell-opposite").css('left', $(this).scrollLeft());
     }).scroll();
 });
 $( document ).ready(function(){

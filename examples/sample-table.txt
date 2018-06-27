@@ -1,7 +1,7 @@
-<div id="table-container" class="sticky-table sticky-headers sticky-ltr-cells">
+<div id="table-container" class="sticky-table sticky-ltr-cells">
                 <table class="table table-striped">
                     <thead>
-                        <tr class="sticky-row">
+                        <tr class="sticky-header">
                             <th class="sticky-cell">Ford</th>
                             <th>Escort</th>
                             <th>Blue</th>

@@ -5,18 +5,18 @@
     <meta charset="utf-8">
     <title>Sticky Table LTR Example</title>
     <link rel="stylesheet" href="./libs/bootstrap.min.css">
-    <link rel="stylesheet" href="../jquery.stickytable.min.css">
+    <link rel="stylesheet" href="../jquery.stickytable.css">
 
     <script src="./libs/jquery-3.2.0.min.js" type="text/javascript"></script>
-    <script src="../jquery.stickytable.min.js" type="text/javascript"></script>
+    <script src="../jquery.stickytable.js" type="text/javascript"></script>
 </head>
 
 <body dir="rtl">
     <h1>RTL Sticky Table</h1>
-    <div class="sticky-table sticky-headers sticky-rtl-cells">
+    <div class="sticky-table sticky-rtl-cells">
         <table class="table table-striped">
             <thead>
-                <tr class="sticky-row">
+                <tr class="sticky-header">
                     <th class="sticky-cell">Ford</th>
                     <th>Escort</th>
                     <th>Blue</th>
@@ -53,10 +53,8 @@
                     <th>Ford</th>
                     <th>Escort</th>
                     <th>Blue</th>
-                    <th>2000</th>
-
+                    <th class="sticky-cell-opposite">2000</th>
                 </tr>
-
             </thead>
             <tbody>
                 <tr>
@@ -96,8 +94,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -136,8 +133,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -176,8 +172,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -216,8 +211,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -256,8 +250,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -296,8 +289,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -336,8 +328,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -376,8 +367,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -416,8 +406,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -456,8 +445,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -496,8 +484,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -536,8 +523,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -576,8 +562,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -616,8 +601,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -656,8 +640,7 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
                 <tr>
                     <td class="sticky-cell">Ford</td>
@@ -696,12 +679,363 @@
                     <td>Ford</td>
                     <td>Escort</td>
                     <td>Blue</td>
-                    <td>2000</td>
-
+                    <td class="sticky-cell-opposite">2000</td>
                 </tr>
-
-
+                <tr>
+                    <td class="sticky-cell">Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td class="sticky-cell-opposite">2000</td>
+                </tr>
+                <tr>
+                    <td class="sticky-cell">Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td class="sticky-cell-opposite">2000</td>
+                </tr>
+                <tr>
+                    <td class="sticky-cell">Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td class="sticky-cell-opposite">2000</td>
+                </tr>
+                <tr>
+                    <td class="sticky-cell">Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td class="sticky-cell-opposite">2000</td>
+                </tr>
+                <tr>
+                    <td class="sticky-cell">Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td class="sticky-cell-opposite">2000</td>
+                </tr>
+                <tr>
+                    <td class="sticky-cell">Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td class="sticky-cell-opposite">2000</td>
+                </tr>
+                <tr>
+                    <td class="sticky-cell">Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td class="sticky-cell-opposite">2000</td>
+                </tr>
+                <tr>
+                    <td class="sticky-cell">Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td>2000</td>
+                    <td>2000</td>
+                    <td>Ford</td>
+                    <td>Escort</td>
+                    <td>Blue</td>
+                    <td class="sticky-cell-opposite">2000</td>
+                </tr>
+                
             </tbody>
+            <tfoot>
+                <tr class="sticky-footer">
+                    <th class="sticky-cell">Ford</th>
+                    <th>Escort</th>
+                    <th>Blue</th>
+                    <th>2000</th>
+                    <th>Ford</th>
+                    <th>Escort</th>
+                    <th>Blue</th>
+                    <th>2000</th>
+                    <th>Ford</th>
+                    <th>Escort</th>
+                    <th>Blue</th>
+                    <th>2000</th>
+                    <th>2000</th>
+                    <th>Ford</th>
+                    <th>Escort</th>
+                    <th>Blue</th>
+                    <th>2000</th>
+                    <th>2000</th>
+                    <th>Ford</th>
+                    <th>Escort</th>
+                    <th>Blue</th>
+                    <th>2000</th>
+                    <th>2000</th>
+                    <th>Ford</th>
+                    <th>Escort</th>
+                    <th>Blue</th>
+                    <th>2000</th>
+                    <th>2000</th>
+                    <th>Ford</th>
+                    <th>Escort</th>
+                    <th>Blue</th>
+                    <th>2000</th>
+                    <th>2000</th>
+                    <th>Ford</th>
+                    <th>Escort</th>
+                    <th>Blue</th>
+                    <th class="sticky-cell-opposite">2000</th>
+                </tr>
+            </tfoot>
         </table>
     </div>
 </body>
