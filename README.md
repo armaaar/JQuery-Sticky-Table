@@ -14,6 +14,7 @@ That's it!
 ### Fixed rows
 To have a fixed header:
 - Add `sticky-header` class to the `<tr>` element you want to get sticky relatively to the top.
+
 To have a fixed footer:
 - Add `sticky-footer` class to the `<tr>` element you want to get sticky relatively to the bottom.
 
