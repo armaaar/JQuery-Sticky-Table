@@ -39,7 +39,7 @@ $( document ).trigger( "stickyTable" );
 You can view examples for more clarification.
 ## Known Issues
 We are aware of the following issues and we would be grateful if anyone can help us with them:
-- sticky rows and cells flickers(having delay before they appear in their correct position) in Firefox <= v57.0 and Microsoft Edge
+- On RTL tables, sticky rows and cells flickers or doesn't appear at all in Microsoft Edge
 ## Credits
 Big thanks to [othree](https://github.com/othree) for his [jQuery RTL Scroll Type Detector](https://github.com/othree/jquery.rtl-scroll-type) which helped us alot supporting RTL tables for different browsers
 ## License

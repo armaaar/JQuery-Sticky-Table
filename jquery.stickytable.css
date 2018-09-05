@@ -29,8 +29,17 @@
     background-color: #fff;
     border-top: 0;
     position: relative;
+    position: -webkit-sticky;
+    position: -ms-sticky;
+    position: sticky;
     outline: 1px solid #ddd;
     z-index: 5;
+}
+.sticky-table table tr.sticky-header th, .sticky-table table tr.sticky-header td {
+    top: 0;
+}
+.sticky-table table tr.sticky-footer th, .sticky-table table tr.sticky-footer td {
+    bottom: 0;
 }
 
 .sticky-table table td.sticky-cell, .sticky-table table th.sticky-cell,
@@ -38,7 +47,18 @@
     background-color: #fff;
     outline: 1px solid #ddd;
     position: relative;
+    position: -webkit-sticky;
+    position: -ms-sticky;
+    position: sticky;
     z-index: 10;
+}
+.sticky-table.sticky-ltr-cells table td.sticky-cell, .sticky-table.sticky-ltr-cells table th.sticky-cell,
+.sticky-table.sticky-rtl-cells table td.sticky-cell-opposite, .sticky-table.sticky-rtl-cells table th.sticky-cell-opposite {
+    left: 0
+}
+.sticky-table.sticky-rtl-cells table td.sticky-cell, .sticky-table.sticky-rtl-cells table th.sticky-cell,
+.sticky-table.sticky-ltr-cells table td.sticky-cell-opposite, .sticky-table.sticky-ltr-cells table th.sticky-cell-opposite {
+    right: 0
 }
 
 .sticky-table table tr.sticky-header td.sticky-cell, .sticky-table table tr.sticky-header th.sticky-cell,
