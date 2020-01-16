@@ -1,12 +1,12 @@
 jQuery(document).on('stickyTable', function() {
-    var positionStickySupport = function() {
+    var positionStickySupport = (function() {
         var el = document.createElement('a'),
             mStyle = el.style;
         mStyle.cssText = "position:sticky;position:-webkit-sticky;position:-ms-sticky;";
         return mStyle.position.indexOf('sticky')!==-1;
-    }();
+    })();
 
-    var scrollTypeRTL = function() {
+    var scrollTypeRTL = (function() {
         var definer = $('<div dir="rtl" style="font-size: 14px; width: 4px; height: 1px; position: absolute; top: -1000px; overflow: scroll">ABCD</div>').appendTo('body')[0],
             scrollTypeRTL = 'reverse';
     
@@ -20,12 +20,41 @@ jQuery(document).on('stickyTable', function() {
         }
         $(definer).remove();
         return scrollTypeRTL;
-    }();
-    
-    if(!positionStickySupport) {
+    })();
+
+    if(positionStickySupport) {
+        
+        var offset = 0;
+        $(".sticky-table table tr.sticky-header").each( function () {
+            $(this).find("th").css('top', offset);
+            $(this).find("td").css('top', offset);
+            offset += $(this).outerHeight();
+        })
+        
+        offset = 0;
+        $($(".sticky-table table tr.sticky-footer").get().reverse()).each( function () {
+            $(this).find("th").css('bottom', offset);
+            $(this).find("td").css('bottom', offset);
+            offset += $(this).outerHeight();
+        })
+
+        $(".sticky-ltr-cells table tr").each( function () {
+            offset = 0;
+            $(this).find(".sticky-cell").each( function () {
+                $(this).css('left', offset);
+                offset += $(this).outerWidth();
+            })
+            
+            offset = 0;
+            $($(this).find(".sticky-cell-opposite").get().reverse()).each( function () {
+                $(this).css('right', offset);
+                offset += $(this).outerWidth();
+            })
+        })
+
+    } else {
         if(navigator.userAgent.match(/Trident\/7\./)) {
             $('.sticky-table').on("mousewheel", function (event) {
-              console.log(event);
                 event.preventDefault();
                 var wd = event.originalEvent.wheelDelta;
                 var csp = $(this).scrollTop();
