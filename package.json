@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/armaaar/JQuery-Sticky-Table/issues"
   },
-  "homepage": "https://github.com/armaaar/JQuery-Sticky-Table#readme"
+  "homepage": "https://github.com/armaaar/JQuery-Sticky-Table#readme",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
 }
