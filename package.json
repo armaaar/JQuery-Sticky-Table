@@ -1,0 +1,30 @@
+{
+  "name": "jquery-sticky-table-plugin",
+  "version": "1.0.0",
+  "description": "jquery.stickytable is a lightweight plugin to help developers have fixed rows or columns in a `<table>` using CSS classes only",
+  "main": "jquery.stickytable.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armaaar/JQuery-Sticky-Table.git"
+  },
+  "keywords": [
+    "jquery",
+    "table",
+    "stick",
+    "sticky",
+    "header",
+    "column"
+  ],
+  "author": "Ahmed Rafik Ibrahim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/armaaar/JQuery-Sticky-Table/issues"
+  },
+  "homepage": "https://github.com/armaaar/JQuery-Sticky-Table#readme"
+}
